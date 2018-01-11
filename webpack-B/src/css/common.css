@@ -1,0 +1,11 @@
+@import './flex.css';
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #ccc;
+}
+
+.flex-div {
+	display: flex;
+}
