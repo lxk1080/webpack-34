@@ -1,9 +1,10 @@
 import func from './js/a.js'
+import './es6/app.js'
 import './css/a.css'
 import './less/a.less'
 import './sass/a.scss'
 
-let name = func()
+let name = func();
 
 function createElement() {
   let div = document.createElement('div');
@@ -11,4 +12,6 @@ function createElement() {
   document.querySelector('#app').appendChild(div)
 }
 
-createElement()
+createElement();
+
+

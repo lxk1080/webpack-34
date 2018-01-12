@@ -60,7 +60,7 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         include: path.resolve(__dirname, 'src'), // 指定范围
-        exclude: path.resolve(__dirname, 'node_modules'), // 排除
+        exclude: path.resolve(__dirname, 'node_modules') // 排除
       },
       {
         test: /\.css$/,
@@ -99,9 +99,9 @@ module.exports = {
     extractSASS,
 
     // 压缩js代码
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   sourceMap: true
+    // }),
 
     // 每次build清除dist文件夹
     new CleanWebpackPlugin('dist/**/*.*', {
