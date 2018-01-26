@@ -13,5 +13,3 @@ function createElement() {
 }
 
 createElement();
-
-
