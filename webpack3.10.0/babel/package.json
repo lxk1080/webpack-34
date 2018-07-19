@@ -1,0 +1,23 @@
+{
+  "name": "babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/.bin/webpack --config ./webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "babel-loader": "^8.0.0-beta.2",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0-beta.54",
+    "@babel/runtime": "^7.0.0-beta.54"
+  }
+}
