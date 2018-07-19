@@ -18,12 +18,12 @@ module.exports = {
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'common',
+      name: 'common', // pageA 和 pageB 的公共业务代码
       minChunks: 2,
       chunks: ['pageA', 'pageB'],
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['vendor', 'manifest'],
+      name: ['vendor', 'manifest'], // 第三方依赖 和 webpack生成的代码
       minChunks: Infinity,
     })
   ]
