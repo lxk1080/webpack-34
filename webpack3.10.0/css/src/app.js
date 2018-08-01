@@ -1,5 +1,7 @@
-import './css/base.css';
 import './css/common.css';
+import base from './css/base.css';
+
+document.querySelector('.content').innerHTML = `<div class=${base.box}></div>`;
 
 // webpack内使用了style-loader/useable，可在在这里控制样式文件是否使用，默认不使用
 /*
@@ -20,4 +22,5 @@ setInterval(() => {
   }
 }, 500)
 */
+
 
