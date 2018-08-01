@@ -1,5 +1,5 @@
 // 此函数将运行在css样式插入到html中时，所以这个时候可以使用window对象
-// 对于每个css文件都会运行一次此函数
+// 对于每个被用到的css文件都会运行一次此函数
 module.exports = function(css) {
   console.log(css);
   console.log(window.innerWidth);

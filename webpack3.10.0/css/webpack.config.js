@@ -22,16 +22,20 @@ module.exports = {
               transform: './css.transform.js', // 此文件导出一个css变换函数
             }
 
-            // <link> 与下面file-loader同用
-            // loader: 'style-loader/url',
-
             // 可以控制样式文件是否使用，可在引入文件app.js内设置
             // loader: 'style-loader/useable',
+
+            // 生成<link>，与下面file-loader同用
+            // loader: 'style-loader/url',
           },
           {
             loader: 'css-loader',
+            options: {
+              // minimize: true, // 压缩(此属性最新版已被移除)
+              modules: true, // 打开模块化
+            }
 
-            // <link> 与上面style-loader/url同用
+            // 生成<link>，与上面style-loader/url同用
             // loader: 'file-loader',
           }
         ]

@@ -60,11 +60,27 @@
 /******/ 	__webpack_require__.p = "./dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, "body {\n    color: red;\n}\n\n._93JaHJR5CsXuPyBpvD532 {\n    border: #000000 solid 4px;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"commonBox": "_93JaHJR5CsXuPyBpvD532"
+};
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 /*
@@ -146,11 +162,11 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports) {
 
 // 此函数将运行在css样式插入到html中时，所以这个时候可以使用window对象
-// 对于每个css文件都会运行一次此函数
+// 对于每个被用到的css文件都会运行一次此函数
 module.exports = function(css) {
   console.log(css);
   console.log(window.innerWidth);
@@ -165,7 +181,7 @@ module.exports = function(css) {
 
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -551,17 +567,20 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_css__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_base_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_css__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_common_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_common_css__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_common_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_base_css__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_base_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_base_css__);
+// css-module 可以单独使用某个class类，但事实上css文件内的样式还是全部被导入的，鸡肋
 
 
+
+document.querySelector('.content').innerHTML = `<div class="${__WEBPACK_IMPORTED_MODULE_1__css_base_css___default.a.box}"></div>`;
 
 // webpack内使用了style-loader/useable，可在在这里控制样式文件是否使用，默认不使用
 /*
@@ -585,32 +604,33 @@ setInterval(() => {
 
 
 
+
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(5);
+var content = __webpack_require__(0);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
 var transform;
 var insertInto;
 
-transform = __webpack_require__(1);
+transform = __webpack_require__(2);
 
 var options = {"insertInto":".header","singleton":true,"transform":"./css.transform.js","hmr":true}
 
 options.transform = transform
 options.insertInto = ".header";
 
-var update = __webpack_require__(2)(content, options);
+var update = __webpack_require__(3)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js!./base.css", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js!./base.css");
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--0-1!./common.css", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--0-1!./common.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -634,20 +654,6 @@ if(false) {
 
 	module.hot.dispose(function() { update(); });
 }
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// imports
-
-
-// module
-exports.push([module.i, "body {\n    background: goldenrod;\n}\n", ""]);
-
-// exports
-
 
 /***/ }),
 /* 6 */
@@ -756,20 +762,20 @@ if(typeof content === 'string') content = [[module.i, content, '']];
 var transform;
 var insertInto;
 
-transform = __webpack_require__(1);
+transform = __webpack_require__(2);
 
 var options = {"insertInto":".header","singleton":true,"transform":"./css.transform.js","hmr":true}
 
 options.transform = transform
 options.insertInto = ".header";
 
-var update = __webpack_require__(2)(content, options);
+var update = __webpack_require__(3)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js!./common.css", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js!./common.css");
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--0-1!./base.css", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--0-1!./base.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -798,15 +804,17 @@ if(false) {
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // imports
-
+exports.i(__webpack_require__(0), undefined);
 
 // module
-exports.push([module.i, "body {\n    color: red;\n}\n", ""]);
+exports.push([module.i, "body {\n    background: goldenrod;\n}\n\n._2SaOUZhroVCSeUHstDhYSi {\n    width: 200px;\n    height: 200px;\n    background: #333333;\n}\n", ""]);
 
 // exports
-
+exports.locals = {
+	"box": "_2SaOUZhroVCSeUHstDhYSi " + __webpack_require__(0).locals["commonBox"] + ""
+};
 
 /***/ })
 /******/ ]);
