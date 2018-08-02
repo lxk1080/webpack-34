@@ -72,11 +72,11 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "body {\n    color: red;\n}\n\n._93JaHJR5CsXuPyBpvD532 {\n    border: #000000 solid 4px;\n}\n", ""]);
+exports.push([module.i, "body {\n    color: red;\n}\n\n.src-css-common_commonBox--93JaH {\n    border: #000000 solid 4px;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"commonBox": "_93JaHJR5CsXuPyBpvD532"
+	"commonBox": "src-css-common_commonBox--93JaH"
 };
 
 /***/ }),
@@ -576,7 +576,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_common_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_base_css__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_base_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_base_css__);
-// css-module 可以单独使用某个class类，但事实上css文件内的样式还是全部被导入的，鸡肋
+// css-module 可以单独引用某个class类(只有类名可以被引用)，但事实上css文件内的样式还是会全部被导入的，鸡肋...
 
 
 
@@ -809,11 +809,11 @@ exports = module.exports = __webpack_require__(1)(false);
 exports.i(__webpack_require__(0), undefined);
 
 // module
-exports.push([module.i, "body {\n    background: goldenrod;\n}\n\n._2SaOUZhroVCSeUHstDhYSi {\n    width: 200px;\n    height: 200px;\n    background: #333333;\n}\n", ""]);
+exports.push([module.i, "body {\n    background: goldenrod;\n}\n\n.src-css-base_box--2SaOU {\n    /*composes一定在会在当前代码之前加载，索性写到第一行*/\n    /*这里虽然只导入了commonBox类，但common.css整个文件还是读取了，导致通过transform处理后的蓝色又变为红*/\n    width: 200px;\n    height: 200px;\n    background: #333333;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"box": "_2SaOUZhroVCSeUHstDhYSi " + __webpack_require__(0).locals["commonBox"] + ""
+	"box": "src-css-base_box--2SaOU " + __webpack_require__(0).locals["commonBox"] + ""
 };
 
 /***/ })

@@ -1,5 +1,5 @@
-// css-module 可以单独使用某个class类，但事实上css文件内的样式还是全部被导入的，鸡肋
-import './css/common.css';
+// css-module 可以单独引用某个class类(只有类名可以被引用)，但事实上css文件内的样式还是会全部被导入的，鸡肋...
+import common from './css/common.css';
 import base from './css/base.css';
 
 document.querySelector('.content').innerHTML = `<div class="${base.box}"></div>`;

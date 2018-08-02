@@ -33,6 +33,7 @@ module.exports = {
             options: {
               // minimize: true, // 压缩(此属性最新版已被移除)
               modules: true, // 打开模块化
+              localIdentName: '[path][name]_[local]--[hash:base64:5]', // 被引入css模块的命名格式
             }
 
             // 生成<link>，与上面style-loader/url同用
