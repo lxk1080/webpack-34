@@ -1,1 +1,0 @@
-export default name = 'hello webpack haha OO!'

@@ -1,0 +1,12 @@
+body {
+    background: goldenrod;
+}
+
+.box {
+    /*composes一定在会在当前代码之前加载，索性写到第一行*/
+    /*这里虽然只导入了commonBox类，但common.css整个文件还是读取了，导致通过transform处理后的蓝色又变为红*/
+    composes: commonBox from './common.css';
+    width: 200px;
+    height: 200px;
+    background: #333333;
+}
