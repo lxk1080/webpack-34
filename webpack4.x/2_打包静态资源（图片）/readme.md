@@ -8,6 +8,7 @@
 ### url-loader
 除了可以做file-loader的事情，还有额外的功能，注意配置`limit`参数
 
+### use
 ``` bash
 # install dependencies
 npm install
