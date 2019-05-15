@@ -9,6 +9,7 @@
 ### sourceMap
 1. `development`模式默认会打开`devtool`为`source-map`
 2. 常用配置
+
 类型 | 说明
 :---: | :-:
 source-map | 会生成`.map`文件
