@@ -1,3 +1,9 @@
+<style>
+  table th:first-of-type {
+    width: 100px;
+  }
+</style>
+
 ## entry、output、sourceMap
 > 基础配置与文件映射
 
